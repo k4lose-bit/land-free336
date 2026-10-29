@@ -249,13 +249,13 @@ details.howto a{color:#1d4ed8;font-weight:700}
     </div>
   </section>
 
-  <footer class="legal" id="legal"></footer>
+  <footer class="legal" id="legalfoot"></footer>
   <div class="printfoot" id="printfoot"></div>
   <p class="note noprint" style="display:none">이 노트는 학습·기록용 도구이며 법률·세무·투자 자문이 아닙니다. 입력한 내용은 이 브라우저(기기)에만 저장되며 서버로 전송되지 않습니다. 기기를 바꾸거나 브라우저 데이터를 지우기 전에 반드시 ⬇ 파일로 내려받기(.json)로 보관해 두세요. © Land Master Pro</p>
 </div>
 
 <script id="core">
-const _SIG="ad434092";
+const _SIG="b89bbed2";
 const LEGAL='<b>© 2026 Land Master Pro (land.free336.com) · 토지 경매 임장 노트 v1.0 · 모든 권리 보유</b>'
 +'<p><b>이용 조건</b> 개인의 학습·기록 목적 사용은 무료입니다. 저작권자의 허락 없이 ① 내용·구조·문구·계산식을 수정해 배포하는 것 ② 판매하거나 유료 자료에 포함하는 것 ③ 저작권 표시·출처를 지우는 것 ④ 다른 사이트·카페·자료에 복제·게시하는 것을 금지합니다. 위반 시 저작권법에 따른 책임이 따를 수 있습니다. 다른 분에게 알려 주실 때는 파일이 아니라 받는 곳 주소(https://land.free336.com/imjang-note.html)를 알려 주세요.</p>'
 +'<p class="warn"><b>⚠ 유의</b> 이 자료는 학습·기록용 도구이며 법률·세무·투자 자문이 아닙니다. 법령·세율은 개정될 수 있고 지자체마다 기준이 다를 수 있으니, 입찰 전 반드시 전문가(변호사·법무사·세무사)와 해당 기관에서 확인하세요. 입찰 판단과 그 결과는 이용자 본인의 책임입니다. 입력한 내용은 이 기기의 브라우저에만 저장되며 서버로 전송되지 않습니다.</p>';
@@ -266,13 +266,13 @@ const LEGAL='<b>© 2026 Land Master Pro (land.free336.com) · 토지 경매 임�
       var c=document.getElementById('core');if(!c)return false;
       var src=c.textContent.replace(/const _SIG="[0-9a-f]{8}";/,'const _SIG="@@SIG@@";');
       if(h(src)!==_SIG)return false;
-      var f=document.getElementById('legal');
+      var f=document.getElementById("legalfoot");
       if(!f||f.textContent.replace(/\s+/g,'')!==LEGAL.replace(/<[^>]*>/g,'').replace(/&amp;/g,'&').replace(/\s+/g,''))return false;
       return true;
     }catch(e){return false}
   }
   function init(){
-    var f=document.getElementById('legal');if(f)f.innerHTML=LEGAL;
+    var f=document.getElementById("legalfoot");if(f)f.innerHTML=LEGAL;
     var pf=document.getElementById('printfoot');if(pf)pf.textContent='© 2026 Land Master Pro · land.free336.com · 토지 경매 임장 노트 v1.0 · 무단 수정·재배포·판매 금지';
     if(!ok()){var t=document.getElementById('tamper');if(t){t.className='tamper on';t.textContent='⚠ 이 파일은 내려받은 원본과 다릅니다. 내용이 수정되었거나 손상되었을 수 있어 계산 결과를 그대로 믿으면 안 됩니다. 원본: https://land.free336.com/imjang-note.html'}}
   }
